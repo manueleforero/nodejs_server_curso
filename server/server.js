@@ -35,9 +35,9 @@ app.post('/', (req, res) => {
         })
 
     } else {
-        res.json({
-            empleado: body
-        });
+        res.status(200).json({
+            "Empleado": body
+        })
     }
 });
 
@@ -47,5 +47,5 @@ app.delete('/', (req, res) => {
 
 
 app.listen(process.env.PORT, () => {
-    console.log('Escuchando MONGO por ', process.env.PORT);
+    console.log('Escuchando MONGO por  ', process.env.PORT);
 });
